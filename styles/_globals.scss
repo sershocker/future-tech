@@ -1,13 +1,26 @@
 @use "helpers" as *;
 
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
 body {
   @include fluid-text(18, 14);
 
-  overflow: hidden;
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
   font-family: var(--font-family-base);
   letter-spacing: -0.03em;
   color: var(--color-gray-50);
   background-color: var(--color-dark);
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1,

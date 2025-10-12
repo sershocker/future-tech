@@ -1,9 +1,13 @@
 @use "../helpers" as *;
 
 .header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
   &__promo {
     @include fluid-text(18, 12);
-
+    background-color: var(--color-dark);
     padding-block: rem(20);
     text-align: center;
     border-bottom: var(--border);
@@ -15,6 +19,10 @@
   &__body {
     padding-block: rem(24);
     background-color: var(--color-dark-10);
+
+    @include mobile {
+      padding-block: rem(20);
+    }
 
     &-inner {
       display: flex;
@@ -38,10 +46,10 @@
       flex-direction: column;
       justify-content: center;
       row-gap: 3rem;
-      &.is-active {
-        .header__menu-list {
-        }
-      }
+      // &.is-active {
+      //   .header__menu-list {
+      //   }
+      // }
 
       &:not(.is-active) {
         @include hide;
@@ -52,6 +60,9 @@
   }
 
   &__menu {
+    @include mobile {
+      overflow-y: auto;
+    }
     &-list {
       display: flex;
       align-items: center;
@@ -82,6 +93,14 @@
         border-radius: rem(10);
         pointer-events: none;
       }
+    }
+  }
+
+  &__contact-us-link {
+    @include mobile {
+      width: 100%;
+      max-width: rem(300);
+      align-self: center;
     }
   }
 }
