@@ -11,11 +11,27 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: start;
-    column-gap: fluid(80, 20);
+    gap: fluid(80, 20);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &-column {
       display: grid;
       row-gap: fluid(36, 16);
+
+      &:last-child {
+        @include tablet {
+          grid-column: -1 / 1;
+
+          .footer__menu-list {
+            flex-direction: row;
+            gap: rem(12);
+            flex-wrap: wrap;
+          }
+        }
+      }
     }
     &-list {
       display: flex;
@@ -25,8 +41,35 @@
 
     &-item {
       display: flex;
-      justify-content: end;
-      align-items: start;
+      align-items: center;
+      gap: rem(8);
+    }
+  }
+
+  &__extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+    padding-block: fluid(40, 24);
+    &-menu {
+      &-list {
+        display: flex;
+      }
+      &-item:not(:last-child) ::after {
+        content: "|";
+        margin-inline: rem(11);
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+  &__socials {
+    @include mobile {
+      order: -1;
     }
   }
 }

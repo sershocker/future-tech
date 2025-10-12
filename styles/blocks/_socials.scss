@@ -1,1 +1,28 @@
 @use "../helpers" as *;
+
+.socials {
+  &__list {
+    display: flex;
+    gap: rem(20);
+
+    @include laptop {
+      gap: rem(14);
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    --size: #{rem(24)};
+
+    @include square(var(--size));
+
+    color: var(--color-light);
+
+    @include mobile {
+      --size: #{rem(20)};
+    }
+  }
+}

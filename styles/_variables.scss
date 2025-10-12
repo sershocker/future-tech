@@ -15,6 +15,12 @@
   --color-accent: #ffd11a;
   --color-red: #ff5500;
 
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-dark-15, var) 67%,
+    var(--color-accent) 150%
+  );
+
   --border: #{rem(2)} solid var(--color-dark-15);
 
   --font-family-base: "Inter", sans-serif;
