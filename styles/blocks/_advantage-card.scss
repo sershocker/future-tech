@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.advantage-card {
+  display: grid;
+  row-gap: rem(30);
+
+  &__link {
+    display: grid;
+    row-gap: rem(4);
+
+    &::after {
+      background-color: var(--accent);
+      border-radius: 50%;
+      //   width: ;
+    }
+  }
+}

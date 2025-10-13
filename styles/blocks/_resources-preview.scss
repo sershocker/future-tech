@@ -1,0 +1,14 @@
+@use "../helpers" as *;
+
+.resources-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: rem(30);
+  align-items: start;
+
+  &__body {
+    display: grid;
+    row-gap: rem(14);
+  }
+}
