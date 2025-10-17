@@ -7,8 +7,22 @@
   row-gap: rem(30);
   align-items: start;
 
-  &__body {
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  &-body {
     display: grid;
     row-gap: rem(14);
+
+    @include laptop {
+      row-gap: rem(6);
+    }
+  }
+
+  &__button {
+    @include mobile-s {
+      width: 100%;
+    }
   }
 }

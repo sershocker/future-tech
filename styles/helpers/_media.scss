@@ -17,6 +17,12 @@ $mobile-s: 480.98;
   }
 }
 
+@mixin tablet-above {
+  @media (width >= rem($tablet)) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (width <= rem($tablet)) {
     @content;

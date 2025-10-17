@@ -2,15 +2,26 @@
 
 .hero {
   &__main {
-    display: grid;
-    grid-template-columns: 60% auto;
-    grid-template-areas:
-      "body resources-preview"
-      "metrics resources-preview";
+    @include tablet-above {
+      display: grid;
+      grid-template-columns: 60% auto;
+      grid-template-areas:
+        "body resources-preview"
+        "metrics resources-preview";
+    }
   }
   &__body {
     grid-area: body;
     padding: rem(150) rem(50) rem(100);
+
+    @include laptop {
+      padding-top: rem(100);
+      padding-right: rem(40);
+    }
+
+    @include tablet {
+      padding: rem(40) rem(0) rem(30);
+    }
   }
   &__subtitle {
     @include fluid-text(30, 18);
@@ -18,43 +29,94 @@
     font-weight: 500;
     color: var(--color-dark-40);
     margin-bottom: rem(30);
+
+    @include mobile {
+      margin-bottom: rem(14);
+    }
   }
 
   &__title {
     margin-bottom: rem(20);
+    @include mobile {
+      margin-bottom: rem(10);
+    }
   }
 
   &__metrics {
     grid-area: metrics;
+    border-top: var(--border);
+
+    @include tablet-above {
+      border-top: var(--border);
+    }
+
+    @include tablet {
+      &::before {
+        width: 100vw;
+        right: calc(var(--container-padding-x) * -1);
+      }
+    }
   }
 
   &__resources-preview {
     grid-area: resources-preview;
     padding-left: rem(80);
     padding-bottom: rem(80);
-    border-left: var(--border);
+
     background: url("../../images/resources-preview/background.png") 0 0 / cover
       no-repeat;
+
+    @include laptop {
+      padding-left: rem(50);
+      padding-bottom: rem(50);
+    }
+
+    @include tablet {
+      width: 100vw;
+      margin-left: calc(var(--container-padding-x) * -1);
+      padding: rem(100) rem(40) rem(40);
+
+      background: url("../../images/resources-preview/background-mobile.png") 0
+        0 / contain no-repeat;
+    }
+
+    @include tablet-above {
+      border-left: var(--border);
+    }
   }
 
   &__advantages {
+    border-block: var(--border);
     &-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      @include tablet-above {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     &-item {
       --paddingX: #{rem(80)};
-
       padding-block: rem(50);
 
-      &:not(:first-child) {
-        padding-left: var(--paddingX);
+      @include laptop {
+        --paddingX: #{rem(50)};
+        padding-block: rem(40);
       }
+      @include tablet-above {
+        &:not(:first-child) {
+          padding-left: var(--paddingX);
+        }
 
-      &:not(:last-child) {
-        padding-right: var(--paddingX);
-        border-right: var(--border);
+        &:not(:last-child) {
+          padding-right: var(--paddingX);
+          border-right: var(--border);
+        }
+      }
+      @include tablet {
+        padding-block: rem(30);
+        &:not(:last-child) {
+          border-bottom: var(--border);
+        }
       }
     }
   }

@@ -11,6 +11,15 @@
     row-gap: rem(10);
     padding: rem(50);
 
+    @include laptop {
+      padding: rem(30) rem(40);
+      row-gap: rem(2);
+    }
+
+    @include tablet {
+      row-gap: rem(0);
+      padding: rem(20);
+    }
     &:first-child {
       padding-left: 0;
     }
