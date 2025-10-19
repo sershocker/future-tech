@@ -19,7 +19,18 @@
 @use "blocks/resources-preview";
 @use "blocks/team";
 
+@use "blocks/card";
+@use "blocks/list";
+@use "blocks/section";
+@use "blocks/tag";
+@use "blocks/tile";
+
 // header,
 // footer {
+//   display: none !important;
+// }
+
+// .hero,
+// .footer {
 //   display: none !important;
 // }
