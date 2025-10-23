@@ -1,0 +1,16 @@
+{
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.foldingStrategy": "auto",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "window.closeWhenEmpty": false,
+  "accessibility.accessibleView.closeOnKeyPress": true,
+  "search.experimental.closedNotebookRichContentResults": false,
+  "extensions.closeExtensionDetailsOnViewChange": false,
+  "terminal.integrated.hideOnLastClosed": true,
+  "editor.showFoldingControls": "always",
+  "editor.suggest.showFolders": true,
+  "notebook.showFoldingControls": "mouseover",
+  "html.autoClosingTags": true,
+  "fold.level": 2
+}

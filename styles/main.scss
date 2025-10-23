@@ -25,12 +25,19 @@
 @use "blocks/tag";
 @use "blocks/tile";
 
+@use "blocks/blog-card";
+@use "blocks/blog-actions";
+@use "blocks/person-card";
+@use "blocks/tabs";
+
 // header,
 // footer {
 //   display: none !important;
 // }
 
+// .header,
 // .hero,
-// .footer {
+// .footer,
+// .section {
 //   display: none !important;
 // }
