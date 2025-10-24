@@ -30,6 +30,8 @@
 @use "blocks/person-card";
 @use "blocks/tabs";
 
+@use "blocks/download-info";
+
 // header,
 // footer {
 //   display: none !important;
@@ -38,6 +40,6 @@
 // .header,
 // .hero,
 // .footer,
-// .section {
+// .blog {
 //   display: none !important;
 // }

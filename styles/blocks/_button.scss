@@ -3,7 +3,7 @@
 .button {
   display: inline-flex;
   justify-content: center;
-  padding: rem(14) rem(20);
+  padding: rem(18) rem(24);
   font-size: rem(18);
   color: var(--color-gray-60);
   background-color: var(--color-dark);
@@ -29,5 +29,9 @@
     border-color: var(--color-accent);
     border-radius: rem(8);
     color: var(--color-dark);
+  }
+
+  &--dark-gray {
+    background-color: var(--color-dark-10);
   }
 }
