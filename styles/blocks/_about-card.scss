@@ -1,0 +1,51 @@
+@use "../helpers" as *;
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(20, 10);
+  background-color: var(--color-dark-10);
+  border-radius: rem(12);
+  border: var(--border);
+  padding: fluid(40, 24);
+
+  @include laptop {
+    border-radius: rem(12);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-base);
+    font-weight: 600;
+    font-size: rem(22);
+
+    --circleSize: #{rem(52)};
+    --circleMarginLeft: #{rem(20)};
+    min-height: var(--circleSize);
+    position: relative;
+
+    @include laptop {
+      font-size: rem(16);
+      --circleSize: #{rem(44)};
+    }
+
+    @include mobile {
+      --circleSize: #{rem(40)};
+    }
+
+    &::after {
+      @include square(var(--circleSize));
+      @include abs-y;
+
+      content: "";
+      right: 0;
+      background: url("/icons/arrow-top-right_black.svg") center no-repeat var(--color-accent);
+      border-radius: 50%;
+    }
+  }
+
+  &__description {
+    color: var(--color-gray-60);
+  }
+}

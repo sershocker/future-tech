@@ -1,0 +1,98 @@
+@use "../helpers" as *;
+
+.about {
+  background-color: var(--color-dark-10);
+  padding-block: fluid(120, 40);
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    column-gap: fluid(80, 20);
+    row-gap: rem(30);
+    align-items: center;
+    grid-template-areas:
+      "icon info"
+      "icon description";
+
+    @include laptop {
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      grid-template-areas:
+        "icon subtitle"
+        "title title"
+        "description description";
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: fluid(150, 60);
+  }
+
+  &__subtitle {
+    justify-self: start;
+    @include mobile {
+      grid-area: subtitle;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      grid-area: title;
+    }
+  }
+
+  &__description {
+    @include mobile {
+      grid-area: description;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    row-gap: fluid(100, 40);
+  }
+
+  &__info {
+    grid-area: info;
+    display: grid;
+    row-gap: rem(16);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__list {
+    display: grid;
+
+    gap: rem(20);
+    background-color: var(--color-dark);
+    padding: rem(20);
+    border: var(--border);
+    border-radius: rem(12);
+
+    @include laptop {
+      gap: rem(10);
+      padding: rem(10);
+      border-radius: rem(10);
+    }
+
+    @include mobile-above {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    @include mobile-above {
+      display: grid;
+    }
+  }
+}
