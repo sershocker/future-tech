@@ -32,6 +32,10 @@
 
 @use "blocks/download-info";
 
+@use "blocks/bordered-grid";
+@use "blocks/rating-view";
+@use "blocks/review-card";
+
 // header,
 // footer {
 //   display: none !important;
@@ -40,6 +44,7 @@
 // .header,
 // .hero,
 // .footer,
-// .blog {
+// .blog,
+// .section {
 //   display: none !important;
 // }
