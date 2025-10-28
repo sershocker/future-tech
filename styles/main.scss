@@ -39,6 +39,11 @@
 @use "blocks/about-card";
 @use "blocks/about";
 
+@use "blocks/summary";
+@use "blocks/news-card";
+@use "blocks/news";
+@use "blocks/hero-alt";
+
 // header,
 // footer {
 //   display: none !important;
@@ -48,6 +53,7 @@
 // .hero,
 // .footer,
 // .blog,
+// .about,
 // .section {
 //   display: none !important;
 // }
