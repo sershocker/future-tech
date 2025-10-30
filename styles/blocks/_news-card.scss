@@ -41,6 +41,11 @@
         @include fluid-text(32, 20);
         font-family: var(--font-family-base);
       }
+
+      &__controls {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 

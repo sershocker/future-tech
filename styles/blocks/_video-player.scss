@@ -1,0 +1,56 @@
+@use "../helpers" as *;
+
+.video-player {
+  position: relative;
+  &__video {
+    height: fluid(412, 210);
+    width: 100%;
+    object-fit: cover;
+    border-radius: rem(12);
+    @include laptop {
+      border-radius: rem(10);
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    inset: 0;
+    padding: rem(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 1rem;
+    transition-duration: var(--transition-duration);
+    z-index: 0;
+
+    &::before {
+      content: "";
+      background-image: linear-gradient(180deg, rgba(20, 20, 20, 0) 40%, rgba(10, 10, 10, 100) 100%);
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
+
+    &:not(.is-active) {
+      @include hide;
+    }
+  }
+
+  &__player-button {
+    --size: #{rem(50)};
+    @include flex-center;
+    @include square(var(--size));
+    padding: 0;
+    color: var(--color-light);
+    background-color: transparent;
+    border: none;
+
+    @include laptop {
+      --size: #{rem(50)};
+    }
+
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}

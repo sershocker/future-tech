@@ -1,0 +1,15 @@
+@use "../helpers" as *;
+
+.video-card {
+  display: grid;
+  row-gap: rem(30);
+
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  &__body {
+    display: grid;
+    row-gap: fluid(10, 4);
+  }
+}

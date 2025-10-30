@@ -44,6 +44,9 @@
 @use "blocks/news";
 @use "blocks/hero-alt";
 
+@use "blocks/video-player";
+@use "blocks/video-card";
+
 // header,
 // footer {
 //   display: none !important;
@@ -54,6 +57,7 @@
 // .footer,
 // .blog,
 // .about,
-// .section {
+// .section,
+// .hero-alt {
 //   display: none !important;
 // }

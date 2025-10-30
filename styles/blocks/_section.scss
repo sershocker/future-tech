@@ -37,4 +37,11 @@
   &__body {
     border-block: var(--border);
   }
+
+  &__link {
+    @include mobile {
+      width: rem(360);
+      margin-inline: auto;
+    }
+  }
 }
