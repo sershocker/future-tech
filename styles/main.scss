@@ -26,6 +26,7 @@
 @use "blocks/tile";
 
 @use "blocks/blog-card";
+
 @use "blocks/blog-actions";
 @use "blocks/person-card";
 @use "blocks/tabs";
@@ -47,6 +48,9 @@
 @use "blocks/video-player";
 @use "blocks/video-card";
 
+@use "blocks/table-of-contents";
+@use "blocks/blog-details";
+@use "blocks/expandble-content";
 // header,
 // footer {
 //   display: none !important;

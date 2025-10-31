@@ -64,7 +64,7 @@
   overflow: hidden !important;
 }
 
-@mixin full-vw-centred-line($property: top, $left: 50%, $right: auto, $translate: -50%) {
+@mixin full-vw-centered-line($property: top, $left: 50%, $right: auto, $translate: -50%) {
   position: relative;
 
   &::before {

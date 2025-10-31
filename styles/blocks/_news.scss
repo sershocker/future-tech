@@ -2,6 +2,19 @@
 
 .news {
   padding-block: fluid(80, 40);
+  // display: grid;
+  // row-gap: rem(60);
+
+  @include laptop {
+    // row-gap: rem(40);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
 
   &__list {
     display: grid;

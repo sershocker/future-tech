@@ -27,11 +27,11 @@
       .bordered-grid__item {
         &:nth-child(odd) {
           padding-right: var(--itemPaddingX);
-          @include full-vw-centred-line(bottom, 100%, auto, -50%);
         }
         &:nth-child(even) {
           padding-left: var(--itemPaddingX);
           border-left: var(--border);
+          @include full-vw-centered-line(bottom, auto, 100%, 50%);
         }
       }
     }
@@ -66,7 +66,7 @@
         }
 
         &:nth-child(3n - 1) {
-          @include full-vw-centred-line(bottom);
+          @include full-vw-centered-line(bottom);
         }
       }
     }
