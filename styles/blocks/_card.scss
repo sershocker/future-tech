@@ -47,6 +47,13 @@
     &-info {
       display: grid;
       row-gap: fluid(16, 6);
+
+      &:has(.rating-view) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+      }
     }
   }
   &__body {
@@ -66,6 +73,26 @@
 
       @include mobile {
         grid-template-columns: 1fr;
+      }
+    }
+
+    &--3-cols {
+      column-gap: rem(20);
+
+      @include mobile-above {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: fluid(50, 20);
+      }
+
+      @include laptop {
+        column-gap: rem(16);
+      }
+
+      @include mobile {
+        row-gap: rem(14);
+      }
+      .card__cell {
+        padding: fluid(30, 20);
       }
     }
 
