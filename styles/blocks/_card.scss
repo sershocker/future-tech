@@ -95,6 +95,30 @@
         padding: fluid(30, 20);
       }
     }
+    &--3-cols-alt {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: rem(20);
+
+      @include mobile-above {
+        row-gap: fluid(50, 20);
+      }
+
+      @include laptop {
+        column-gap: rem(16);
+      }
+
+      @include mobile-s {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: rem(14);
+      }
+      .card__cell {
+        padding: fluid(30, 20);
+        &--wide {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
 
     &--2-cols-alt {
       gap: rem(30) rem(20);
@@ -113,15 +137,22 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    row-gap: fluid(4, 2);
+    row-gap: fluid(20, 4);
     &-title {
       @include fluid-text(24, 18);
     }
     &-description {
       @include fluid-text(18, 14);
     }
+
     &--wide {
       grid-column: -1/1;
+    }
+
+    &--wide-on-mobile-s {
+      @include mobile-s {
+        grid-column: -1/1;
+      }
     }
     &:has(> *:only-child) {
       justify-content: center;
@@ -144,6 +175,16 @@
 
       @include laptop {
         border-radius: rem(10);
+      }
+    }
+
+    &:not(.tile) {
+      @include mobile-s {
+        grid-template: inital;
+
+        .card__cell__link {
+          grid-area: initial;
+        }
       }
     }
 

@@ -20,6 +20,24 @@
     @include tablet {
       width: max-content;
     }
+
+    &--compact {
+      display: inline-flex;
+      padding: rem(10);
+      background-color: var(--color-dark);
+      border-radius: rem(10);
+      column-gap: rem(10);
+    }
+    .tabs__button {
+      &.is-active {
+        background-color: var(--color-dark-15);
+        border: none;
+      }
+      padding-block: rem(18);
+      @include laptop {
+        padding-block: rem(14);
+      }
+    }
   }
 
   &__button {
