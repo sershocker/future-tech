@@ -2334,4 +2334,13 @@ button[aria-label]::before {
   }
 }
 
+.header,
+.hero,
+.footer,
+.blog,
+.about,
+.hero-alt {
+  display: none !important;
+}
+
 /*# sourceMappingURL=main.css.map */
