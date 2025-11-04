@@ -53,17 +53,26 @@
 @use "blocks/expandble-content";
 
 @use "blocks/report-card";
+
+@use "blocks/contacts-card";
+@use "blocks/field";
+@use "blocks/select";
+@use "blocks/checkbox";
+@use "blocks/feedback-form";
+@use "blocks/accordion";
+@use "blocks/accordion-group";
+@use "blocks/contacts";
 // header,
 // footer {
 //   display: none !important;
 // }
 
-.header,
-.hero,
-.footer,
-.blog,
-.about,
-// .section,
-.hero-alt {
-  display: none !important;
-}
+// .header,
+// .hero,
+// .footer,
+// .blog,
+// .about,
+// // .section,
+// .hero-alt {
+//   display: none !important;
+// }

@@ -62,8 +62,8 @@
       <section class="contacts" aria-labelledby="contacts-title">
         <header class="contacts__header">
           <h1 class="visually-hidden" id="contacts-title">Contacts</h1>
-          <ul class="boredered-grid bordered-grid--4-cols container">
-            <li class="boredered-grid__item">
+          <ul class="bordered-grid bordered-grid--4-cols container">
+            <li class="bordered-grid__item">
               <div class="contacts-card">
                 <h2 class="contacts-card__title h6">General Inquiries</h2>
                 <div class="contacts-card__body">
@@ -76,7 +76,7 @@
                 </div>
               </div>
             </li>
-            <li class="boredered-grid__item">
+            <li class="bordered-grid__item">
               <div class="contacts-card">
                 <h2 class="contacts-card__title h6">Technical Support</h2>
                 <div class="contacts-card__body">
@@ -89,7 +89,7 @@
                 </div>
               </div>
             </li>
-            <li class="boredered-grid__item">
+            <li class="bordered-grid__item">
               <div class="contacts-card">
                 <h2 class="contacts-card__title h6">Our Office</h2>
                 <div class="contacts-card__body">
@@ -100,11 +100,11 @@
                 </div>
               </div>
             </li>
-            <li class="boredered-grid__item">
+            <li class="bordered-grid__item">
               <div class="contacts-card">
                 <h2 class="contacts-card__title h6">Connect with Us</h2>
                 <div class="contacts-card__body">
-                  <div class="socials">
+                  <div class="socials socials--3-cols">
                     <ul class="socials__list">
                       <li class="socials__item">
                         <a href="/" class="socials__link" target="_blank" aria-label="Twitter" title="Twitter"
@@ -187,19 +187,19 @@
                       <label for="firstName" class="field__label"
                         >First Name <span class="field__required-star" aria-hidden="true">*</span>
                       </label>
-                      <input class="control" id="firstName" placeholder="Enter First Name " required />
+                      <input class="field__control" id="firstName" placeholder="Enter First Name " required />
                     </div>
 
                     <div class="feedback-form__cell field">
                       <label for="lastName" class="field__label">Last Name </label>
-                      <input class="control" id="lastName" placeholder="Enter Last Name " />
+                      <input class="field__control" id="lastName" placeholder="Enter Last Name " />
                     </div>
 
                     <div class="feedback-form__cell field">
                       <label for="Email" class="field__label"
                         >Email <span class="field__required-star" aria-hidden="true">*</span>
                       </label>
-                      <input class="control" id="Email" placeholder="Enter your Email " required type="email" />
+                      <input class="field__control" id="Email" placeholder="Enter your Email " required type="email" />
                     </div>
 
                     <div class="feedback-form__cell field">
@@ -361,6 +361,51 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="about" aria-labelledby="about__title">
+        <div class="about__inner container">
+          <header class="about__header">
+            <img class="about__icon" src="./images/about/icon.svg" alt="" width="150" height="150" />
+            <div class="about__info">
+              <p class="about__subtitle tag">Learn, Connect, and Innovate</p>
+              <h2 class="about__title" id="about__title">Be Part of the Future Tech Revolution</h2>
+            </div>
+            <div class="about__description">
+              <p>
+                Immerse yourself in the world of future technology. Explore our comprehensive resources, connect with
+                fellow tech enthusiasts, and drive innovation in the industry. Join a dynamic community of
+                forward-thinkers.
+              </p>
+            </div>
+          </header>
+          <ul class="about__list">
+            <li class="about__item">
+              <a href="" class="about-card tile">
+                <h3 class="about-card__title">Resource Access</h3>
+                <div class="about-card__description">
+                  Visitors can access a wide range of resources, including ebooks, whitepapers, reports.
+                </div>
+              </a>
+            </li>
+            <li class="about__item">
+              <a href="" class="about-card tile">
+                <h3 class="about-card__title">Community Forum</h3>
+                <div class="about-card__description">
+                  Join our active community forum to discuss industry trends, share insights, and collaborate with
+                  peers.
+                </div>
+              </a>
+            </li>
+            <li class="about__item">
+              <a href="" class="about-card tile">
+                <h3 class="about-card__title">Tech Events</h3>
+                <div class="about-card__description">
+                  Stay updated on upcoming tech events, webinars, and conferences to enhance your knowledge.
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

@@ -81,6 +81,47 @@
     }
   }
 
+  &--4-cols {
+    --columns: 4;
+    --itemPaddingX: #{rem(50)};
+
+    column-gap: calc(var(--itemPaddingX) * 2);
+
+    @include laptop {
+      --itemPaddingX: #{rem(30)};
+    }
+
+    @include tablet {
+      --columns: 2;
+    }
+
+    @include mobile {
+      .bordered-grid__item {
+        &:not(:last-child) {
+          border-bottom: var(--border);
+        }
+      }
+      --columns: 1;
+    }
+    @include tablet-above {
+      .bordered-grid__item {
+        &:not(:last-child) {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: rem(1);
+            top: 0;
+            right: calc(-1 * var(--itemPaddingX));
+
+            background-color: var(--color-dark-15);
+          }
+        }
+      }
+    }
+  }
+
   &__item {
     padding-block: var(--itemPaddingY);
   }
