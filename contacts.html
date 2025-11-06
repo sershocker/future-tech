@@ -8,6 +8,7 @@
     />
     <title>FutureTech | CONTACTS</title>
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" defer></script>
     <script src="./scripts/main.js" type="module" defer></script>
   </head>
   <body>
@@ -187,26 +188,152 @@
                       <label for="firstName" class="field__label"
                         >First Name <span class="field__required-star" aria-hidden="true">*</span>
                       </label>
-                      <input class="field__control" id="firstName" placeholder="Enter First Name " required />
+                      <input class="field__control" id="firstName" placeholder="Your First Name " required />
                     </div>
 
                     <div class="feedback-form__cell field">
                       <label for="lastName" class="field__label">Last Name </label>
-                      <input class="field__control" id="lastName" placeholder="Enter Last Name " />
+                      <input class="field__control" id="lastName" placeholder="Your Last Name " />
                     </div>
 
                     <div class="feedback-form__cell field">
                       <label for="Email" class="field__label"
                         >Email <span class="field__required-star" aria-hidden="true">*</span>
                       </label>
-                      <input class="field__control" id="Email" placeholder="Enter your Email " required type="email" />
+                      <input
+                        class="field__control"
+                        id="Email"
+                        placeholder="FutureTech@tech.com "
+                        required
+                        type="email"
+                      />
                     </div>
 
                     <div class="feedback-form__cell field">
                       <label for="phoneNumber" class="field__label">Phone Number</label>
                       <div class="field__body">
-                        <div class="select">SELECT</div>
-                        <input type="text" class="field__control" id="phoneNumber" placeholder="Enter Phone Number" />
+                        <div class="select field" data-js-select>
+                          <label for="phoneNumberPrefix" class="select__label" id="phone-number-prefix-select-label"
+                            >Phone number prefix</label
+                          >
+                          <select
+                            id="phoneNumberPrefix"
+                            class="select__original-control field__control"
+                            tabindex="-1"
+                            data-js-select-original-control
+                          >
+                            <option value="+1" selected>+1</option>
+                            <option value="+2">+2</option>
+                            <option value="+3">+3</option>
+                            <option value="+4">+4</option>
+                            <option value="+5">+5</option>
+                            <option value="+6">+6</option>
+                            <option value="+7">+7</option>
+                            <option value="+8">+8</option>
+                          </select>
+
+                          <div class="select__body">
+                            <div
+                              class="select__button field__control"
+                              tabindex="0"
+                              role="combobox"
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              aria-controls="phone-number-prefix-select-dropdown"
+                              aria-labelledby="phone-number-prefix-select-label"
+                              data-js-select-button
+                            >
+                              +1
+                            </div>
+                            <div
+                              class="select__dropdown is-on-the-left-side"
+                              role="listbox"
+                              id="phone-number-prefix-select-dropdown"
+                              aria-labelledby="phone-number-prefix-select-label"
+                              data-js-select-dropdown
+                            >
+                              <div
+                                id="phone-number-prefix-select-option-1"
+                                aria-selected="true"
+                                class="select__option is-selected"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +1
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-2"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +2
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-3"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +3
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-4"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +4
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-5"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +5
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-6"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +6
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-7"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +7
+                              </div>
+                              <div
+                                id="phone-number-prefix-select-option-8"
+                                aria-selected="false"
+                                class="select__option"
+                                role="option"
+                                data-js-select-option
+                              >
+                                +8
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <input
+                          type="text"
+                          class="field__control"
+                          id="phoneNumber"
+                          placeholder="(012)345-67-89"
+                          data-js-input-mask="(000) 000-00-00"
+                        />
                       </div>
                     </div>
 
