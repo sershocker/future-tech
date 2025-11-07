@@ -32,7 +32,7 @@
   }
   &__item {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column-reverse;
     row-gap: rem(10);
     padding: rem(50);

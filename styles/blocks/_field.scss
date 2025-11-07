@@ -39,6 +39,10 @@
     &::placeholder {
       color: var(--color-dark-40);
     }
+
+    &:user-invalid {
+      border-color: var(--color-red);
+    }
   }
   textarea.field__control {
     resize: vertical;

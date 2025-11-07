@@ -713,6 +713,16 @@ button[aria-label]::before {
     height: 3rem;
   }
 }
+@media (width <= 90.06125rem) and (any-hover: hover) {
+  .socials--3-cols .socials__link:hover {
+    border-color: var(--color-accent);
+  }
+}
+@media (width <= 90.06125rem) and (any-hover: none) {
+  .socials--3-cols .socials__link:active {
+    border-color: var(--color-accent);
+  }
+}
 .socials__list {
   display: flex;
   gap: 1.25rem;
@@ -1016,7 +1026,7 @@ button[aria-label]::before {
 }
 .metrics__item {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column-reverse;
   row-gap: 0.625rem;
   padding: 3.125rem;
@@ -1773,13 +1783,13 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2.5rem;
+  row-gap: 3.75rem;
   max-width: 25rem;
   margin-inline: auto;
 }
 @media (width <= 90.06125rem) {
   .review-card {
-    row-gap: 1.875rem;
+    row-gap: 3.125rem;
   }
 }
 .review-card__author {
@@ -2467,6 +2477,9 @@ button[aria-label]::before {
 .field__control::placeholder {
   color: var(--color-dark-40);
 }
+.field__control:user-invalid {
+  border-color: var(--color-red);
+}
 .field textarea.field__control {
   resize: vertical;
   min-height: 10.1875rem;
@@ -2680,6 +2693,9 @@ button[aria-label]::before {
 .checkbox__input:not(:checked)::after {
   opacity: 0;
   visibility: hidden;
+}
+.checkbox__input:user-invalid {
+  border-color: var(--color-red);
 }
 .checkbox__input::after {
   content: "✓";
